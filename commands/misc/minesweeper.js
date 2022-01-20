@@ -19,10 +19,10 @@ module.exports.run = (message, args, client) => {
       //this thing generates all cells
     };
 
-    let numberOfMines = functions.random(5, 10);
+    let numberOfMines = Math.floor(Math.random() * 10) + 5;
     for (let i = 0; i < numberOfMines; i++) {
-        const x = functions.random(9);
-        const y = functions.random(9);
+        const x = Math.floor(Math.random() * 9);
+        const y = Math.floor(Math.random() * 9);
 
         cases[x][y].mined = true;
     };
